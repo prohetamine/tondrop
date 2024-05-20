@@ -1,0 +1,24 @@
+{
+  "name": "Ton Drop",
+  "short_name": "ton",
+  "description": "",
+  "version": "1.0.0",
+  "author": "",
+  "action": {},
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["src/script.js"]
+    }
+  ]
+}
